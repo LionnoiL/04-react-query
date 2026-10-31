@@ -31,8 +31,8 @@ const App = () => {
     isError,
     isSuccess,
   } = useQuery<FetchMoviesResponse>({
-    queryKey: ["fetchMovies", query],
-    queryFn: () => fetchMovies(query),
+    queryKey: ["fetchMovies", query, currentPage],
+    queryFn: () => fetchMovies(query, currentPage),
     enabled: query !== "",
     placeholderData: keepPreviousData,
   });
@@ -43,7 +43,7 @@ const App = () => {
     if (isSuccess && movies.results.length === 0) {
       toast("No movies found for your request.");
     }
-  }, [isSuccess]);
+  }, [isSuccess, movies]);
 
   return (
     <div className={css.app}>

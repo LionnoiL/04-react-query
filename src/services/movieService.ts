@@ -11,9 +11,10 @@ interface FetchMoviesResponse {
 
 export const fetchMovies = async (
   query: string,
+  page: number,
 ): Promise<FetchMoviesResponse> => {
   const config = {
-    params: { query },
+    params: { query, page },
     headers: {
       Authorization: `Bearer ${apiKey}`,
     },
