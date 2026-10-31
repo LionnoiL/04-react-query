@@ -9,7 +9,7 @@ import MovieGrid from "../MovieGrid/MovieGrid";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
 import MovieModal from "../MovieModal/MovieModal";
-import Pagination from "../ReactPaginate/ReactPaginate";
+import Pagination from "../Pagination/Pagination";
 
 interface FetchMoviesResponse {
   results: Movie[];
