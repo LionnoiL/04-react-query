@@ -23,6 +23,7 @@ const App = () => {
 
   const handlerOnSubmit = (query: string) => {
     setQuery(query);
+    setCurrentPage(1);
   };
 
   const {
