@@ -12,8 +12,6 @@ import MovieModal from "../MovieModal/MovieModal";
 
 const App = () => {
   const [query, setQuery] = useState<string>("");
-  // const [movies, setMovies] = useState<Movie[]>([]);
-  // const [hasError, setHasError] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
   const handlerOnSubmit = (query: string) => {
